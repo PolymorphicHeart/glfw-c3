@@ -20,7 +20,7 @@ fn int main(String[] args)
 	if (!glfw::init())
 	{
 		io::printn("failed to init glfw!");
-		return -1;
+		return 1;
 	}
 
 	glfw::window_hint(glfw::CONTEXT_VERSION_MAJOR, 4);
@@ -33,7 +33,7 @@ fn int main(String[] args)
 	if (wnd == null)
 	{
 		io::printn("failed to create window!");
-		return -1;
+		return 1;
 	}
 
 	glfw::set_key_cb(wnd, fn void(Window wnd, Key key, int scancode, Action action, Mod mods)
@@ -59,7 +59,7 @@ fn int main(String[] args)
 	if (!gl::load_gl_loader((gl::FnLoadProc)&glfw::get_proc_address))
 	{
 		io::printn("failed to load opengl functions!");
-		return -1;
+		return 1;
 	}
 
 	print_debug_info();
