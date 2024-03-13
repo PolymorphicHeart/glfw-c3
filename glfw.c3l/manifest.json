@@ -1,0 +1,12 @@
+{ 
+  "provides" : "glfw",
+  "targets" : 
+  {
+    "macos-aarch64" : 
+    {
+      "linkflags" : ["-w"],
+      "dependencies" : [],
+      "linked-libs" : ["glfw3", "Cocoa.framework", "OpenGL.framework", "CoreVideo.framework", "GLUT.framework", "IOKit.framework", "c"]
+    }
+  }
+}

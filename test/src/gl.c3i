@@ -1,0 +1,18 @@
+module gl;
+
+def FnLoadProc = fn void*(char* name);
+
+fn int load_gl_loader(FnLoadProc)
+@extern("gladLoadGLLoader");
+
+def FnGLClearColorProc = fn void(float red, float green, float blue, float alpha);
+extern FnGLClearColorProc clear_color @extern("glad_glClearColor");
+
+def FnGLViewportProc = fn void(int x, int y, int width, int height);
+extern FnGLViewportProc viewport @extern("glad_glViewport");
+
+def FnGLGetStringProc = fn char*(uint name);
+extern FnGLGetStringProc get_string @extern("glad_glGetString");
+
+def FnGLClearProc = fn void(uint mask);
+extern FnGLClearProc clear @extern("glad_glClear");

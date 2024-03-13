@@ -1,3 +1,9 @@
+# Build directory
+*/build
+
+#MacOS Cache files
+*.DS_Store
+
 # Prerequisites
 *.d
 
@@ -50,3 +56,6 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# Include required libs
+!libglfw3.a
