@@ -15,8 +15,6 @@ dependencies field in project.json:
 
 ```c
 module app;
-
-import std::io;
 import glfw;
 
 fn int main(String[] args)
